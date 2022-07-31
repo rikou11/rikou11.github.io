@@ -1,0 +1,69 @@
+@import "../rules/rules.scss";
+@include screen-sm {
+  .game-container {
+    max-width: 100%;
+    margin: 0 auto;
+    @include flex-col;
+    height: calc(100vh - 100px);
+    h1 {
+      background-color: rgb(212, 212, 212);
+font-size: 1.5rem;
+      padding: 30px 0;
+      width: calc(80px * 3 + 10px * 2);
+      text-align: center;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+
+      .square {
+        background: #000;
+        width: 80px;
+        height: 80px;
+        color: white;
+        @include flex-center;
+        font-size: 4rem;
+      }
+    }
+  }
+}
+@include screen-lg {
+  .game-container {
+    max-width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+    @include flex-col;
+    background: #262626;
+
+    h1 {
+      background-color: rgb(212, 212, 212);
+
+      padding: 30px 0;
+      width: calc(150px * 3 + 20px * 2);
+      text-align: center;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      .square {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 10rem;
+        font-weight: bolder;
+        background: rgb(212, 212, 212);
+        width: 150px;
+        height: 150px;
+        color: white;
+        transition: all 0.1s ease;
+        &:hover {
+          background-color: #000000;
+        }
+      }
+    }
+  }
+}
