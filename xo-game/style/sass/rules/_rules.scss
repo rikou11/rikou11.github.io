@@ -1,0 +1,83 @@
+
+@mixin screen-sm {
+    @media screen and (max-width: 768px ) {
+        @content;
+    }
+
+}
+@mixin  screen-lg {
+    @media screen and (min-width: 768px ) {
+        @content;
+    }    
+}
+
+
+@mixin  flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+@mixin  flex-col {
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-around;
+    align-items: center;
+    
+}
+@mixin flex-row-between {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 40px;
+    align-items: center;
+    
+}
+    
+
+@mixin  flex-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+@mixin a {
+    a{
+        text-decoration: none;
+        color:rgb(255, 255, 255);
+    }
+}
+@mixin  btn {
+    box-sizing: border-box;
+     height: 3rem;
+     width: 7rem;
+     border-radius: 60px;
+     &:hover{
+       background-color: #eaeaea; 
+     }
+}
+
+@mixin content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+
+@mixin fade {
+
+    transition: background-image .6s;
+// background-size:  auto;
+}
+
+@keyframes fadeout {
+    0% {
+         opacity: 0;  
+    }
+    100% {
+     opacity: 1;
+    }
+}
+    

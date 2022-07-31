@@ -1,0 +1,42 @@
+@include screen-lg {
+    .settings {
+      position: fixed;
+      left: -300px;
+      width: 300px;
+      top: 0;
+      background: rgb(245, 245, 245);
+      z-index: 3;
+  
+      min-height: 100vh;
+      transition: all 0.3s ease;
+  
+      .gear {
+        padding: 14px;
+        position: absolute;
+        right: -50px;
+        background: rgb(255, 255, 255);
+        top: 200px;
+        text-align: center;
+        cursor: pointer;
+  
+        .fa-gear {
+          transition: transform 0.7s ease;
+  
+          &:hover {
+            color: rgb(0, 255, 221);
+            transform: rotate(360deg);
+          }
+        }
+      }
+    }
+  
+    .settings-opened {
+      left: 0;
+    }
+  }
+  @include screen-sm {
+    .settings {
+      display: none;
+    }
+  }
+  
